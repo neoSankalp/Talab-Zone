@@ -1,11 +1,17 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Home from "./pages/Home";
+import Shakes from "./pages/Shakes";
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-noto_sans_jp font-bold underline">
-        Hello world!
-      </h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shakes" element={<Shakes />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
