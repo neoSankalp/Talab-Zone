@@ -1,5 +1,6 @@
 import React from "react";
 import FlavorSlider from "../components/flavorSlider";
+import WeddingHookahBanner from "../components/WeddingHookahPlanner";
 
 const Home = () => {
   return (
@@ -43,6 +44,10 @@ const Home = () => {
           top-tier equipment and handled by professionals who know the art of a
           perfect pull.
         </h3>
+      </div>
+      {/* ================== WEDDING HOOKAH PLANNER SECTION ================ */}
+      <div className="p-16 my-16 max-sm:p-1">
+        <WeddingHookahBanner />
       </div>
     </div>
   );
