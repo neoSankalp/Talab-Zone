@@ -12,6 +12,9 @@ export default {
         noto_sans_jp: ["noto-sans-jp", "sans-serif"],
         Roboto: ["Roboto-Light", "sans-serif"],
       },
+      colors: {
+        color1: "#FACE8D",
+      },
     },
   },
   plugins: [],

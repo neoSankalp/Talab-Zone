@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================ UTILITY CLASSES ============================ */
 @font-face {
   font-family: "bitterRose";
   src: url("/fonts/bitterRose.ttf") format("truetype");
@@ -12,7 +13,13 @@
 @font-face {
   font-family: "chillax";
   src: url("/fonts/Chillax-Variable.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "chillax";
+  src: url("/fonts/Chillax-Variable.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -49,4 +56,72 @@
   src: url("/fonts/Roboto-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+/* ============================= BUTTONS ============================= */
+.squishy {
+  position: relative;
+  transition: all 250ms;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.squishy-candy {
+  background: linear-gradient(
+    to bottom right,
+    rgb(250, 204, 21),
+    /* Yellow-400 */ rgb(234, 179, 8) /* Yellow-500 */
+  );
+  border-radius: 9999px;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 2px 0 0 #facc15,
+    0 4px 0 0 #eab308, 0 6px 0 0 #ca8a04, 0 8px 0 0 #a16207,
+    0 8px 16px 0 rgba(250, 204, 21, 0.5);
+}
+
+.squishy-candy:hover {
+  transform: translateY(4px);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 1px 0 0 #facc15,
+    0 2px 0 0 #eab308, 0 3px 0 0 #ca8a04, 0 4px 0 0 #a16207,
+    0 4px 8px 0 rgba(250, 204, 21, 0.5);
+}
+
+/* ======================= SUB-HEADING LANDING PAGE ======================== */
+.subhead {
+  position: relative;
+}
+
+.subhead::before {
+  content: "Hookah";
+  -webkit-text-stroke: 16px black;
+  -webkit-text-fill-color: white;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10rem;
+  font-weight: 700;
+  color: red;
+  text-shadow: 0 0 5px #000;
+  animation: blink infinite linear 1s;
+  font-family: "Chillax", sans-serif;
+  z-index: -1;
+}
+
+@keyframes blink {
+  0% {
+    text-shadow: 0 0 0 transparent;
+  }
+  50% {
+    text-shadow: 0 0 50px #fafa0a;
+  }
+  60% {
+    text-shadow: 0 0 0 transparent;
+  }
+  80% {
+    text-shadow: 0 0 50px #fafa0a;
+  }
+  100% {
+    text-shadow: 0 0 0 transparent;
+  }
 }
