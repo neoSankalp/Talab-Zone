@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(0);
   const [initialLoad, setInitialLoad] = useState(true);
   const navIndicator = useRef(null);
@@ -9,15 +11,13 @@ export default function Navbar() {
   const tabs = [
     { text: "Hookah", sectionId: "hero" },
     { text: "About us", sectionId: "about-us" },
-    { text: "SHAKES" },
+    { text: "SHAKES", path: "/shakes" },
     { text: "VIP CARDS", sectionId: "vip-cards" },
   ];
 
-  // Initialize refs array
   useEffect(() => {
     tabElements.current = tabElements.current.slice(0, tabs.length);
 
-    // Initial positioning after a short delay
     setTimeout(() => {
       if (tabElements.current[0] && navIndicator.current) {
         moveIndicator(0);
@@ -26,7 +26,6 @@ export default function Navbar() {
     }, 100);
   }, [tabs.length]);
 
-  // Direct DOM manipulation for immediate visual feedback
   const moveIndicator = (index) => {
     const tab = tabElements.current[index];
     if (tab && navIndicator.current) {
@@ -36,30 +35,28 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    // Handle window resize only
     const handleResize = () => {
       moveIndicator(activeTab);
     };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, [activeTab]);
 
-  const scrollToSection = (sectionId, index) => {
-    // Move the indicator and update state
+  const handleTabClick = (tab, index) => {
     moveIndicator(index);
     setActiveTab(index);
 
-    // Scroll to section
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 80,
-        behavior: "smooth",
-      });
+    if (tab.path) {
+      navigate(tab.path);
+    } else if (tab.sectionId) {
+      const section = document.getElementById(tab.sectionId);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
@@ -78,7 +75,7 @@ export default function Navbar() {
                     ? "text-white"
                     : "text-black hover:text-gray-500"
                 }`}
-                onClick={() => scrollToSection(tab.sectionId, index)}
+                onClick={() => handleTabClick(tab, index)}
               >
                 <span className="font-normal whitespace-nowrap">
                   {tab.text}

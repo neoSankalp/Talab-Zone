@@ -1,5 +1,5 @@
 import { useState } from "react";
-import footerImg from "../assets/footerImg.png";
+import footerImg from "../../assets/footerImg.png";
 
 export default function Footer() {
   return (

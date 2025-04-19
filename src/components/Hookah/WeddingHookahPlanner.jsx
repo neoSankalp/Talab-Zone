@@ -1,6 +1,6 @@
 import React from "react";
-import weddingHookah from "../assets/weddingHookah.png";
-import weddingHookahMobile from "../assets/weddingHookahMobile.png";
+import weddingHookah from "../../assets/weddingHookah.png";
+import weddingHookahMobile from "../../assets/weddingHookahMobile.png";
 
 const WeddingHookahBanner = () => {
   return (

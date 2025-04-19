@@ -1,8 +1,8 @@
 import React from "react";
-import VIPImg from "../assets/vipImg.png";
-import VIPImg1 from "../assets/vipImg1.jpg";
-import VIPImg2 from "../assets/vipImg2.jpg";
-import VIPImg3 from "../assets/vipImg3.jpg";
+import VIPImg from "../../assets/vipImg.png";
+import VIPImg1 from "../../assets/vipImg1.jpg";
+import VIPImg2 from "../../assets/vipImg2.jpg";
+import VIPImg3 from "../../assets/vipImg3.jpg";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
 

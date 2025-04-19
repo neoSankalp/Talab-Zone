@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
-import FlavorSlider from "../components/flavorSlider";
-import WeddingHookahBanner from "../components/WeddingHookahPlanner";
-import VIPCards from "../components/VIPCards";
-import Aboutus from "../components/Aboutus";
+import FlavorSlider from "../components/Hookah/flavorSlider";
+import WeddingHookahBanner from "../components/Hookah/WeddingHookahPlanner";
+import VIPCards from "../components/Hookah/VIPCards";
+import Aboutus from "../components/Hookah/Aboutus";
 
 const Home = () => {
   const controls = useAnimation();

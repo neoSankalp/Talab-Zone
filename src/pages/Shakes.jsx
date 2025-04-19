@@ -1,7 +1,10 @@
 import React from "react";
+import HeroShakes from "../components/Shakes/Hero";
 
-const Shakes = () => {
-  return <div>Shakes</div>;
-};
-
-export default Shakes;
+export default function Shakes() {
+  return (
+    <div className="font-sans">
+      <HeroShakes />
+    </div>
+  );
+}
