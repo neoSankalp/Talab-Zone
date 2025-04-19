@@ -26,7 +26,7 @@ const VIPCards = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="flex justify-center items-center gap-32 py-32 px-8">
+      <div className="flex flex-wrap justify-center items-center gap-32 max-sm:gap-10 py-32 px-8 max-sm:px-1">
         {[
           {
             title: "SIGNATURE AMBIENCE",
@@ -46,7 +46,7 @@ const VIPCards = () => {
         ].map((card, index) => (
           <div
             key={index}
-            className={`relative rounded-xl w-[20rem] h-[25rem] overflow-hidden ${card.glow} transition-transform transform hover:scale-105 font-Roboto`}
+            className={`relative rounded-xl w-[20rem] h-[25rem] max-sm:w-[10rem] max-sm:h-[15rem] overflow-hidden ${card.glow} transition-transform transform hover:scale-105 font-Roboto`}
           >
             <img
               src={card.img}
@@ -54,9 +54,9 @@ const VIPCards = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/50"></div>{" "}
-            <div className="absolute bottom-0 p-4 w-full">
+            <div className="absolute bottom-0 p-4 max-sm:p-1 max-sm:pb-5 w-full">
               <h3
-                className={`text-6xl font-bitterRose font-bold mb-2`}
+                className={`text-6xl max-sm:text-3xl font-bitterRose font-bold mb-2`}
                 style={{
                   WebkitTextStroke: `.1px ${
                     card.glow.match(/#[0-9a-f]{6}|#[0-9a-f]{3}/i)?.[0] ||
@@ -77,7 +77,7 @@ const VIPCards = () => {
                 {card.title}
               </h3>
               <a href="#">
-                <button className="squishy squishy-candy text-black text-base max-sm:text-lg font-chillax px-6 py-2">
+                <button className="squishy squishy-candy text-black text-base font-chillax px-6 py-2 max-sm:px-3 max-sm:py-1 max-sm:text-xs">
                   KNOW MORE <Send className="w-5 h-5" />
                 </button>
               </a>

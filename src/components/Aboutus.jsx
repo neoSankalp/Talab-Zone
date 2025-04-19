@@ -1,92 +1,86 @@
 import React from "react";
+import AboutImg from "../assets/aboutImg.png";
+import AboutImg2 from "../assets/about2Img.png";
 
 export default function Aboutus() {
   return (
-    <div className="flex flex-col md:flex-row w-full min-h-screen bg-black text-white">
-      {/* Left Section with Hero Image and Overlay Content */}
-      <div className="w-full md:w-1/2 relative">
+    <div className="flex flex-col md:flex-row w-full min-h-screen bg-black text-white my-10">
+      <div className="w-full md:w-1/2 relative text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 z-10"></div>
-        <div className="absolute top-5 left-5 z-20">
-          <h2 className="text-2xl font-semibold text-gray-200">Talab Zone</h2>
+        <div className="absolute top-5 left-1/2 -translate-x-1/2 z-20">
+          <h2 className="text-2xl font-semibold text-gray-200 font-chillax">
+            Talab Zone
+          </h2>
         </div>
 
         <div className="absolute top-1/3 left-0 right-0 px-8 z-20">
-          <p className="text-lg md:text-xl mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+          <p className="text-lg md:text-xl mb-8 font-CabinetGrotesk">
+            Where every puff tells a story.
+            <br /> Step in, sit back, and let the clouds carry you.
           </p>
 
-          <p className="text-xl italic font-light">September 19, 2022</p>
-          <h1 className="text-4xl md:text-6xl font-bold mt-2">Special Offer</h1>
-        </div>
-
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20">
-          <div className="bg-white/90 rounded-full flex text-black px-2">
-            <button className="px-4 py-2 flex items-center">
-              <span className="w-4 h-4 mr-2 rounded-full border border-gray-700"></span>
-              Hookah
-            </button>
-            <button className="px-4 py-2">About us</button>
-            <button className="px-4 py-2 mx-1 bg-black text-white rounded-full">
-              SHAKES
-            </button>
-            <button className="px-4 py-2">VIP CARDS</button>
-          </div>
+          <p className="text-5xl italic font-light font-bitterRose text-color1">
+            September 19, 2025
+          </p>
+          <h1 className="text-4xl md:text-6xl font-chillax font-bold mt-2">
+            Special Offer
+          </h1>
         </div>
 
         <img
-          src="/api/placeholder/800/800"
+          src={AboutImg}
           alt="Lounge interior with stylish lighting"
           className="w-full h-full object-cover"
         />
       </div>
 
-      {/* Right Content Section */}
-      <div className="w-full md:w-1/2 px-8 py-12 flex flex-col">
+      <div className="w-full md:w-1/2 px-8 py-4 flex flex-col font-chillax">
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-4">Lorem ipsum dolor</h2>
+          <h2 className="text-3xl font-bold mb-4">Where Smoke Meets Soul</h2>
           <p className="text-gray-300 mb-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer
-            malesuada nunc vel risus commodo viverra maecenas. Dis parturient
-            montes nascetur ridiculus mus mauris vitae ultricies. Placerat duis
-            ultricies lacus sed turpis. Vel elit scelerisque mauris pellentesque
-            pulvinar pellentesque habitant morbi tristique. Turpis massa sed
-            elementum tempus egestas sed sed risus.
+            At Talab Zone, we don’t just serve hookah – we create experiences.
+            From the moment you walk in, you're greeted with smooth beats, warm
+            lighting, and a vibe that instantly feels like home. Whether you’re
+            flying solo, catching up with friends, or making memories that
+            matter, our lounge is designed to elevate your chill to a whole new
+            level.
           </p>
         </div>
 
         <div className="mb-12">
           <img
-            src="/api/placeholder/600/300"
+            src={AboutImg2}
             alt="Bar interior with bottles display"
             className="w-full h-64 object-cover mb-8"
           />
 
-          <h2 className="text-3xl font-bold mb-4">Lorem ipsum dolor</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Talab Zone – Puff. Chill. Repeat.
+          </h2>
           <p className="text-gray-300 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer
-            malesuada nunc vel risus commodo viverra maecenas. Dis parturient
-            montes nascetur ridiculus mus mauris vitae ultricies. Placerat duis
-            ultricies lacus sed turpis. Vel elit scelerisque mauris pellentesque
-            pulvinar pellentesque habitant morbi tristique. Turpis massa sed
-            elementum tempus egestas sed sed risus.
+            Our carefully curated menu features a wide range of premium hookah
+            flavors, exotic fusions, and signature mixes you won’t find anywhere
+            else. Paired with handcrafted mocktails, coffee blends, and savory
+            snacks, every session at Talab Zone is a full-on sensory escape.
+            We’re big on quality, ambiance, and making sure your time here feels
+            effortless and unforgettable.
           </p>
 
           <p className="text-gray-300 mb-6">
-            Velit ut tortor pretium viverra. Vivamus arcu felis bibendum ut.
-            Quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-            Fusce ut placerat orci nulla pellentesque dignissim enim.
+            More than just a hookah lounge, Talab Zone is a growing culture of
+            comfort, creativity, and connection. With weekly live music, themed
+            nights, and a crowd that knows how to vibe, there’s always something
+            happening here. It’s not just about what you smoke — it’s about who
+            you become while you're here.
           </p>
 
           <p className="text-gray-300">
-            Congue eu consequat ac felis donec et. Feugiat vivamus at augue eget
-            arcu dictum. Scelerisque felis imperdiet proin fermentum leo vel
-            orci. Auctor urna nunc id cursus metus aliquam eleifend mi.
-            Facilisis mauris sit amet massa vitae tortor condimentum lacinia.
-            Eget arcu dictum varius duis at consectetur lorem. Magna eget est
-            lorem ipsum.
+            Every corner of Talab Zone is crafted to inspire. From our aesthetic
+            interiors to the laid-back seating and ambient lighting, everything
+            is built for comfort and conversation. Whether you're unwinding
+            after a long day or celebrating something special, our space is your
+            sanctuary — a place where the outside world slows down and the good
+            vibes take over.
           </p>
         </div>
       </div>

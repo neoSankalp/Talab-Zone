@@ -2,6 +2,7 @@ import React from "react";
 import FlavorSlider from "../components/flavorSlider";
 import WeddingHookahBanner from "../components/WeddingHookahPlanner";
 import VIPCards from "../components/VIPCards";
+import Aboutus from "../components/Aboutus";
 
 const Home = () => {
   return (
@@ -54,6 +55,11 @@ const Home = () => {
       {/* ================== VIP CARDS SECTION ================ */}
       <div>
         <VIPCards />
+      </div>
+
+      {/* ================== ABOUT US SECTION ================ */}
+      <div>
+        <Aboutus />
       </div>
     </div>
   );
