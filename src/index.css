@@ -69,9 +69,15 @@ body {
 }
 
 @font-face {
-  font-family: "Roboto-Light";
+  font-family: "Roboto";
   src: url("/fonts/Roboto-Light.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 

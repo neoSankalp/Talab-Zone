@@ -1,6 +1,7 @@
 import React from "react";
 import FlavorSlider from "../components/flavorSlider";
 import WeddingHookahBanner from "../components/WeddingHookahPlanner";
+import VIPCards from "../components/VIPCards";
 
 const Home = () => {
   return (
@@ -48,6 +49,11 @@ const Home = () => {
       {/* ================== WEDDING HOOKAH PLANNER SECTION ================ */}
       <div className="p-16 my-16 max-sm:p-1">
         <WeddingHookahBanner />
+      </div>
+
+      {/* ================== VIP CARDS SECTION ================ */}
+      <div>
+        <VIPCards />
       </div>
     </div>
   );
