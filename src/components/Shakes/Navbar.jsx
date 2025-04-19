@@ -1,19 +1,36 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const NavbarShakes = () => {
   const [hoverItem, setHoverItem] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const menuItems = [
-    { id: "hookah", label: "Hookah" },
-    { id: "shakes", label: "Shakes" },
-    { id: "desert", label: "Desert" },
-    { id: "booknow", label: "Book Now" },
+    { id: "hookah", label: "Hookah", isRoute: true, path: "/" },
+    { id: "shakes", label: "Shakes", isRoute: false },
+    { id: "desert", label: "Desert", isRoute: false },
+    { id: "booknow", label: "Book Now", isRoute: false },
   ];
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  // Handle navigation for mixed destinations
+  const handleNavigation = (item, e) => {
+    if (item.isRoute) {
+      e.preventDefault();
+      scrollTo(0, 0);
+      navigate(item.path);
+    } else {
+      // For non-route items, the default anchor behavior (scrolling to section) works
+      // We just need to close the mobile menu if open
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    }
   };
 
   return (
@@ -26,10 +43,11 @@ const NavbarShakes = () => {
           {menuItems.map((item) => (
             <li key={item.id} className="relative">
               <a
-                href={`#${item.id}`}
+                href={item.isRoute ? item.path : `#${item.id}`}
                 className="block px-4 py-2 text-gray-500 font-medium text-lg hover:text-[#0C3B2C] transition-colors duration-300"
                 onMouseEnter={() => setHoverItem(item.id)}
                 onMouseLeave={() => setHoverItem(null)}
+                onClick={(e) => handleNavigation(item, e)}
               >
                 {item.label}
                 <span
@@ -96,9 +114,9 @@ const NavbarShakes = () => {
               {menuItems.map((item) => (
                 <li key={item.id}>
                   <a
-                    href={`#${item.id}`}
+                    href={item.isRoute ? item.path : `#${item.id}`}
                     className="block px-6 py-3 text-gray-500 font-medium text-lg hover:text-[#0C3B2C] hover:bg-gray-50 transition-colors duration-300"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => handleNavigation(item, e)}
                   >
                     {item.label}
                   </a>

@@ -3,7 +3,10 @@ import PromoBanner from "../../assets/PromoBanner.png";
 
 export default function CafePromoBanner() {
   return (
-    <div className="relative w-full overflow-hidden px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-4 sm:py-6 bg-white font-chillax">
+    <div
+      id="booknow"
+      className="relative w-full overflow-hidden px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-4 sm:py-6 bg-white font-chillax"
+    >
       <div className="relative w-full h-[30vh] sm:h-[35vh] md:h-[40vh] overflow-hidden">
         <img
           src={PromoBanner}

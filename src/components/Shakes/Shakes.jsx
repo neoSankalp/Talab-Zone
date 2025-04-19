@@ -41,7 +41,10 @@ export default function ShakesPanel() {
   ];
 
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-8 sm:py-12 md:py-16 mx-auto bg-white font-chillax">
+    <div
+      id="shakes"
+      className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-8 sm:py-12 md:py-16 mx-auto bg-white font-chillax"
+    >
       {/* Title - Small screens: centered with lines on both sides, Large screens: original left-aligned style */}
       <div className="flex items-center mb-6 sm:mb-8">
         {/* Small screens title (hidden on lg+ screens) */}
