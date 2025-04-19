@@ -41,7 +41,7 @@ const VIPCards = () => {
           {
             title: "CURATED HOOKAH FLAVORS",
             img: VIPImg3,
-            glow: "shadow-[0_0_40px_#ffe600]",
+            glow: "shadow-[0_0_40px_#ffbf00]",
           },
         ].map((card, index) => (
           <div
@@ -56,7 +56,7 @@ const VIPCards = () => {
             <div className="absolute inset-0 bg-black/50"></div>{" "}
             <div className="absolute bottom-0 p-4 max-sm:p-1 max-sm:pb-5 w-full">
               <h3
-                className={`text-6xl max-sm:text-3xl font-bitterRose font-bold mb-2`}
+                className={`text-6xl max-sm:text-3xl text-white font-bitterRose font-bold mb-2`}
                 style={{
                   WebkitTextStroke: `.1px ${
                     card.glow.match(/#[0-9a-f]{6}|#[0-9a-f]{3}/i)?.[0] ||
