@@ -6,8 +6,6 @@ export default function Navbar() {
   const navIndicator = useRef(null);
   const tabElements = useRef([]);
 
-  const isManualScrolling = useRef(false);
-
   const tabs = [
     { text: "Hookah", sectionId: "hero" },
     { text: "About us", sectionId: "about-us" },
@@ -15,9 +13,11 @@ export default function Navbar() {
     { text: "VIP CARDS", sectionId: "vip-cards" },
   ];
 
+  // Initialize refs array
   useEffect(() => {
     tabElements.current = tabElements.current.slice(0, tabs.length);
 
+    // Initial positioning after a short delay
     setTimeout(() => {
       if (tabElements.current[0] && navIndicator.current) {
         moveIndicator(0);
@@ -26,6 +26,7 @@ export default function Navbar() {
     }, 100);
   }, [tabs.length]);
 
+  // Direct DOM manipulation for immediate visual feedback
   const moveIndicator = (index) => {
     const tab = tabElements.current[index];
     if (tab && navIndicator.current) {
@@ -35,78 +36,30 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (isManualScrolling.current) return;
-
-      const scrollPosition = window.scrollY + 100;
-
-      const sections = tabs.map((tab) => {
-        const element = document.getElementById(tab.sectionId);
-        if (!element) return { id: tab.sectionId, top: 0, bottom: 0 };
-
-        const rect = element.getBoundingClientRect();
-        return {
-          id: tab.sectionId,
-          top: rect.top + window.scrollY,
-          bottom: rect.bottom + window.scrollY,
-        };
-      });
-
-      for (let i = 0; i < sections.length; i++) {
-        const lastSection = i === sections.length - 1;
-
-        if (lastSection && scrollPosition >= sections[i].top) {
-          if (activeTab !== i) {
-            setActiveTab(i);
-            moveIndicator(i);
-          }
-          break;
-        } else if (
-          !lastSection &&
-          scrollPosition >= sections[i].top &&
-          scrollPosition < sections[i + 1].top
-        ) {
-          if (activeTab !== i) {
-            setActiveTab(i);
-            moveIndicator(i);
-          }
-          break;
-        }
-      }
-    };
-
+    // Handle window resize only
     const handleResize = () => {
       moveIndicator(activeTab);
     };
 
     window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
     };
-  }, [activeTab, tabs]);
+  }, [activeTab]);
 
   const scrollToSection = (sectionId, index) => {
+    // Move the indicator and update state
     moveIndicator(index);
-
     setActiveTab(index);
 
-    isManualScrolling.current = true;
-
+    // Scroll to section
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
         top: section.offsetTop - 80,
         behavior: "smooth",
       });
-
-      setTimeout(() => {
-        isManualScrolling.current = false;
-      }, 1000);
-    } else {
-      isManualScrolling.current = false;
     }
   };
 

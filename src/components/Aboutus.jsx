@@ -19,12 +19,7 @@ export default function Aboutus() {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 z-10"></div>
-        <motion.div
-          className="absolute top-5 left-1/2 -translate-x-1/2 z-20"
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
+        <motion.div className="absolute top-5 left-1/2 -translate-x-1/2 z-20">
           <h2 className="text-2xl font-semibold text-gray-200 font-chillax">
             Talab Zone
           </h2>
