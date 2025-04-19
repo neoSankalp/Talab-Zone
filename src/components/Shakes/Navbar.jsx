@@ -6,10 +6,10 @@ const NavbarShakes = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const menuItems = [
-    { id: "home", label: "Home" },
-    { id: "food", label: "Food" },
+    { id: "hookah", label: "Hookah" },
+    { id: "shakes", label: "Shakes" },
     { id: "desert", label: "Desert" },
-    { id: "inquiry", label: "Inquiry" },
+    { id: "booknow", label: "Book Now" },
   ];
 
   const toggleMobileMenu = () => {

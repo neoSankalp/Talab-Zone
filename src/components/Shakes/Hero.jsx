@@ -65,7 +65,7 @@ const HeroShakes = () => {
         {/* Headline text - responsive sizing */}
         <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-4 sm:left-6 z-10">
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-wide"
+            className="text-5xl font-extrabold text-white leading-tight tracking-wide"
             style={{ textShadow: "2px 2px 0 rgba(0,50,50,0.3)" }}
           >
             SIP THE
@@ -75,9 +75,10 @@ const HeroShakes = () => {
         </div>
       </div>
 
-      <div className="w-full h-36 flex justify-center items-center">
-        <h1 className="text-center text-7xl text-white font-bitterRose font-bold text-stroke">
-          Sip the thick, chill the thrill – only at Talab Shakes.
+      <div className="w-full h-44 flex justify-center items-center">
+        <h1 className="text-center text-7xl max-sm:text-5xl text-white font-bitterRose font-bold text-stroke">
+          Sip the thick, chill the thrill <br />
+          only at Talab Shakes.
         </h1>
       </div>
 

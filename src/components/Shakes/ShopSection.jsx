@@ -8,18 +8,31 @@ import shopImg2 from "../../assets/shopImg2.png";
 
 export default function ShopSection() {
   return (
-    <div className="px-32 py-16 bg-white">
-      {/* Title */}
-      <div className="flex justify-center items-center mb-8 w-[30vw]">
-        <div className="h-px bg-gray-500 flex-grow"></div>
-        <h2 className="text-5xl font-bold font-noto_sans_jp text-teal-700 px-4 tracking-wider text-stroke-custom">
-          SHOP GUIDE
-        </h2>
+    <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-8 sm:py-12 md:py-16 bg-white">
+      {/* Title - Small screens: centered with lines, Large screens: original style */}
+      <div className="flex items-center mb-6 sm:mb-8">
+        {/* Small screens title (mobile-first) */}
+        <div className="flex w-full items-center lg:hidden">
+          <div className="h-px bg-gray-500 flex-grow"></div>
+          <h2 className="text-3xl md:text-4xl font-bold font-noto_sans_jp text-teal-700 px-2 sm:px-4 tracking-wider text-stroke-custom">
+            SHOP GUIDE
+          </h2>
+          <div className="h-px bg-gray-500 flex-grow"></div>
+        </div>
+
+        {/* Large screens title (hidden on smaller screens) */}
+        <div className="hidden lg:flex justify-start items-center w-[30vw]">
+          <div className="h-px bg-gray-500 flex-grow"></div>
+          <h2 className="text-5xl font-bold font-noto_sans_jp text-teal-700 px-4 tracking-wider text-stroke-custom">
+            SHOP GUIDE
+          </h2>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="space-y-4">
-          <div className="overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        {/* Location 1 */}
+        <div className="space-y-3 sm:space-y-4">
+          <div className="overflow-hidden rounded">
             <img
               src={shopImg1}
               alt="Hotel and Restaurant"
@@ -27,16 +40,16 @@ export default function ShopSection() {
             />
           </div>
 
-          {/* Updated chef images section with equal sizing */}
-          <div className="grid grid-cols-2 gap-2">
-            <div className="aspect-square overflow-hidden">
+          {/* Chef images section with equal sizing */}
+          <div className="grid grid-cols-2 gap-2 sm:gap-3">
+            <div className="aspect-square overflow-hidden rounded">
               <img
                 src={chefImg1}
                 alt="Chef 1"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="aspect-square overflow-hidden">
+            <div className="aspect-square overflow-hidden rounded">
               <img
                 src={chefImg2}
                 alt="Chef 2"
@@ -45,12 +58,12 @@ export default function ShopSection() {
             </div>
           </div>
 
-          <div className="pt-2">
-            <h2 className="font-bold mb-2">LOCATION 1</h2>
-            <div className="flex items-start space-x-2 text-sm mb-1">
+          <div className="pt-1 sm:pt-2">
+            <h2 className="font-bold text-sm sm:text-base mb-2">LOCATION 1</h2>
+            <div className="flex items-start space-x-2 text-xs sm:text-sm mb-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mt-0.5 flex-shrink-0"
+                className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5 flex-shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -70,10 +83,10 @@ export default function ShopSection() {
               </svg>
               <p>WASHINGTON SQUARE, NEW YORK, NY 10012, UNITED STATES</p>
             </div>
-            <div className="flex items-center space-x-2 text-sm">
+            <div className="flex items-center space-x-2 text-xs sm:text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 flex-shrink-0"
+                className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -90,21 +103,22 @@ export default function ShopSection() {
           </div>
         </div>
 
-        <div className="space-y-4">
-          <div className="overflow-hidden">
+        {/* Location 2 */}
+        <div className="space-y-3 sm:space-y-4 mt-6 md:mt-0">
+          <div className="overflow-hidden rounded">
             <img src={shopImg2} alt="Rivarno Cafe" className="w-full h-auto" />
           </div>
 
-          {/* Updated chef images section with equal sizing */}
-          <div className="grid grid-cols-2 gap-2">
-            <div className="aspect-square overflow-hidden">
+          {/* Chef images section with equal sizing */}
+          <div className="grid grid-cols-2 gap-2 sm:gap-3">
+            <div className="aspect-square overflow-hidden rounded">
               <img
                 src={chefImg3}
                 alt="Chef 3"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="aspect-square overflow-hidden">
+            <div className="aspect-square overflow-hidden rounded">
               <img
                 src={chefImg4}
                 alt="Chef 4"
@@ -113,12 +127,12 @@ export default function ShopSection() {
             </div>
           </div>
 
-          <div className="pt-2">
-            <h2 className="font-bold mb-2">LOCATION 2</h2>
-            <div className="flex items-start space-x-2 text-sm mb-1">
+          <div className="pt-1 sm:pt-2">
+            <h2 className="font-bold text-sm sm:text-base mb-2">LOCATION 2</h2>
+            <div className="flex items-start space-x-2 text-xs sm:text-sm mb-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mt-0.5 flex-shrink-0"
+                className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5 flex-shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -136,15 +150,15 @@ export default function ShopSection() {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <p>
+              <p className="break-words">
                 ST. PAUL'S CHURCHYARD, CITY OF LONDON, LONDON EC4M 8AD, UNITED
                 KINGDOM
               </p>
             </div>
-            <div className="flex items-center space-x-2 text-sm">
+            <div className="flex items-center space-x-2 text-xs sm:text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 flex-shrink-0"
+                className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
