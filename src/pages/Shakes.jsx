@@ -4,6 +4,7 @@ import ShakesPanel from "../components/Shakes/Shakes";
 import DessertPanel from "../components/Shakes/Dessert";
 import InquiryBanner from "../components/Shakes/InquiryBanner";
 import ShopSection from "../components/Shakes/ShopSection";
+import CafePromoBanner from "../components/Shakes/CafePromoBanner";
 
 export default function Shakes() {
   return (
@@ -13,6 +14,7 @@ export default function Shakes() {
       <DessertPanel />
       <InquiryBanner />
       <ShopSection />
+      <CafePromoBanner />
     </div>
   );
 }
