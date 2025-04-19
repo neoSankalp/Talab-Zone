@@ -5,6 +5,7 @@ import Shakes from "./pages/Shakes";
 import Navbar from "./components/Hookah/Navbar";
 import NavbarShakes from "./components/Shakes/Navbar";
 import Footer from "./components/Hookah/Footer";
+import ShakesFooter from "./components/Shakes/Footer";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
               <>
                 <NavbarShakes />
                 <Shakes />
+                <ShakesFooter />
               </>
             }
           />
