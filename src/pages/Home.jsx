@@ -49,7 +49,10 @@ const Home = () => {
   return (
     <div>
       {/* ================== HERO SECTION ================ */}
-      <div className="w-full py-5 h-auto min-h-screen bg-[url('./assets/bg.png')] bg-cover bg-no-repeat bg-center">
+      <div
+        id="hero"
+        className="w-full py-5 h-auto min-h-screen bg-[url('./assets/bg.png')] bg-cover bg-no-repeat bg-center"
+      >
         <div className="text-center mt-48">
           <h2 className="text-color1 text-5xl font-bitterRose">
             The pure taste of
@@ -62,7 +65,7 @@ const Home = () => {
             tone, and mellow vibes wrap around you like a velvet night.
           </p>
           <div className="mt-16">
-            <a href="#">
+            <a href="#flavors">
               <button className="squishy squishy-candy text-black text-xl max-sm:text-lg font-chillax px-6 py-2">
                 Experience
               </button>
@@ -72,7 +75,7 @@ const Home = () => {
       </div>
 
       {/* ================== FLAVORS SECTION ================ */}
-      <div>
+      <div id="flavors">
         <h3 className="text-white text-center leading-relaxed font-merienda text-3xl">
           you have big plans... <br /> we have hookah plans.
         </h3>
@@ -89,6 +92,7 @@ const Home = () => {
 
       {/* ================== WEDDING HOOKAH PLANNER SECTION ================ */}
       <motion.div
+        id="wedding-planner"
         className="p-16 my-16 max-sm:p-1"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -100,6 +104,7 @@ const Home = () => {
 
       {/* ================== VIP CARDS SECTION ================ */}
       <motion.div
+        id="vip-cards"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -110,6 +115,7 @@ const Home = () => {
 
       {/* ================== ABOUT US SECTION ================ */}
       <motion.div
+        id="about-us"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}

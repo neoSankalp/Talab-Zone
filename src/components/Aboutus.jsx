@@ -10,6 +10,7 @@ export default function Aboutus() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
+      id="aboutus"
     >
       <motion.div
         className="w-full md:w-1/2 relative text-center"
