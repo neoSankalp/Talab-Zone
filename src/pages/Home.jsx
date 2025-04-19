@@ -54,10 +54,10 @@ const Home = () => {
           <h2 className="text-color1 text-5xl font-bitterRose">
             The pure taste of
           </h2>
-          <h1 className="subhead leading-none z-10 text-[10rem] font-extrabold text-white font-chillax max-md:text-[7rem] max-sm:text-[6rem]">
+          <h1 className="subhead leading-none z-10 text-[10rem] font-extrabold text-white font-chillax max-md:text-[7rem] max-sm:text-[6rem] max-[400px]:text-[5.5rem]">
             Hookah
           </h1>
-          <p className="font-chillax text-white w-[35%] max-lg:w-[50%] max-md:w-[70%] relative left-[50%] -translate-x-[50%]">
+          <p className="font-chillax text-white w-[35%] max-lg:w-[50%] max-md:w-[70%] relative left-[50%] -translate-x-[50%] max-sm:text-sm">
             Step into a world where flavor dances with rhythm, music sets the{" "}
             tone, and mellow vibes wrap around you like a velvet night.
           </p>
@@ -72,43 +72,20 @@ const Home = () => {
       </div>
 
       {/* ================== FLAVORS SECTION ================ */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <motion.h3
-          className="text-white text-center leading-relaxed font-merienda text-3xl"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+      <div>
+        <h3 className="text-white text-center leading-relaxed font-merienda text-3xl">
           you have big plans... <br /> we have hookah plans.
-        </motion.h3>
-        <motion.div
-          className="py-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        </h3>
+        <div className="py-10">
           <FlavorSlider />
-        </motion.div>
-        <motion.h3
-          className="text-white text-center leading-relaxed w-[70%] relative left-[50%] -translate-x-[50%] font-merienda text-2xl max-sm:text-base"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        </div>
+        <h3 className="text-white text-center leading-relaxed w-[70%] relative left-[50%] -translate-x-[50%] font-merienda text-2xl max-sm:text-base">
           From rich double apple to icy mint fusions and tropical explosions,
           our hookah menu is curated to elevate your senses. Crafted using
           top-tier equipment and handled by professionals who know the art of a
           perfect pull.
-        </motion.h3>
-      </motion.div>
+        </h3>
+      </div>
 
       {/* ================== WEDDING HOOKAH PLANNER SECTION ================ */}
       <motion.div

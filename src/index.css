@@ -194,3 +194,9 @@ body {
     font-size: 6rem;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .subhead::before {
+    font-size: 5.5rem;
+  }
+}
