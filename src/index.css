@@ -26,6 +26,12 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "bitterRose";
+  src: url("/fonts/bitterRose.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "chillax";
@@ -190,7 +196,8 @@ body {
 }
 
 .text-stroke {
-  text-shadow: 0 0 20px black;
+  -webkit-text-stroke: 0.5px black;
+  color: white;
 }
 
 .text-stroke-custom {

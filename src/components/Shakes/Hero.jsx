@@ -76,7 +76,7 @@ const HeroShakes = () => {
       </div>
 
       <div className="w-full h-36 flex justify-center items-center">
-        <h1 className="text-center text-4xl text-color1 font-bitterRose font-bold text-stroke">
+        <h1 className="text-center text-7xl text-white font-bitterRose font-bold text-stroke">
           Sip the thick, chill the thrill – only at Talab Shakes.
         </h1>
       </div>
