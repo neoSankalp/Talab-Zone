@@ -7,44 +7,10 @@ import Aboutus from "../components/Hookah/Aboutus";
 
 const Home = () => {
   const controls = useAnimation();
-  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     controls.start({ opacity: 1, y: 0 });
   }, [controls]);
-
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 60 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-  const staggerChildren = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const heroTextVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (custom) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: custom * 0.2, duration: 0.5 },
-    }),
-  };
-
-  const buttonVariants = {
-    hover: {
-      scale: 1.05,
-      boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.2)",
-      transition: { type: "spring", stiffness: 400, damping: 10 },
-    },
-    tap: { scale: 0.95 },
-  };
 
   return (
     <div>

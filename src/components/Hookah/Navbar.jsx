@@ -48,6 +48,7 @@ export default function Navbar() {
     setActiveTab(index);
 
     if (tab.path) {
+      scrollTo(0, 0);
       navigate(tab.path);
     } else if (tab.sectionId) {
       const section = document.getElementById(tab.sectionId);
