@@ -6,6 +6,8 @@ import Navbar from "./components/Hookah/Navbar";
 import NavbarShakes from "./components/Shakes/Navbar";
 import Footer from "./components/Hookah/Footer";
 import ShakesFooter from "./components/Shakes/Footer";
+import shakeLoader from "./assets/shakeLoader.gif";
+import hookahLoader from "./assets/hookahLoader.gif";
 
 // Loader component
 const LoaderOverlay = ({ loaderSrc, backgroundColor = "#ffffff" }) => {
@@ -31,10 +33,8 @@ const AppContent = () => {
   const [loaderSrc, setLoaderSrc] = useState("");
   const [loaderBg, setLoaderBg] = useState("#ffffff");
 
-  const HOOKAH_LOADER =
-    "https://media.lordicon.com/icons/wired/lineal/1979-hookah.gif";
-  const SHAKES_LOADER =
-    "https://media.tenor.com/7oU_6pM91fMAAAAM/catjimim-straw.gif";
+  const HOOKAH_LOADER = hookahLoader;
+  const SHAKES_LOADER = shakeLoader;
 
   useEffect(() => {
     // Set loader and background based on route
