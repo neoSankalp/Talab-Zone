@@ -1,5 +1,5 @@
 import React from "react";
-import EnquiryBannerImg from "../../assets/enquiryBannerImg.png";
+import { assets } from "../../assets/assets";
 
 export default function InquiryBanner() {
   return (
@@ -10,7 +10,7 @@ export default function InquiryBanner() {
         <div
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `url(${EnquiryBannerImg})`,
+            backgroundImage: `url(${assets.EnquiryBannerImg})`,
           }}
         ></div>
 

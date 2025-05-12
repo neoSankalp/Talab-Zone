@@ -1,5 +1,5 @@
 import { useState } from "react";
-import footerImg from "../../assets/footerImg.png";
+import { assets } from "../../assets/assets";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className=" w-full h-[80%]">
           <div className=" right-0 top-0 w-full h-full flex justify-end">
             <img
-              src={footerImg}
+              src={assets.footerImg}
               alt="Hookah with colorful smoke"
               className="object-contain h-full"
             />

@@ -1,24 +1,16 @@
 import React, { useState, useEffect } from "react";
-import HeroSliderImg1 from "../../assets/heroSliderImg1.png";
-import HeroSliderImg2 from "../../assets/heroSliderImg2.jpg";
-import HeroSliderImg3 from "../../assets/heroSliderImg3.jpg";
-import HeroSliderImg4 from "../../assets/heroSliderImg4.jpg";
-import HeroSliderImg5 from "../../assets/heroSliderImg5.jpg";
-import HeroImg2 from "../../assets/heroImg2.png";
-import HeroImg3 from "../../assets/heroImg3.png";
-import HeroImg4 from "../../assets/heroImg4.png";
+import { assets } from "../../assets/assets";
 
 const HeroShakes = () => {
   const heroImages = [
-    HeroSliderImg1,
-    HeroSliderImg2,
-    HeroSliderImg3,
-    HeroSliderImg4,
-    HeroSliderImg5,
+    assets.HeroSliderImg1,
+    assets.HeroSliderImg2,
+    assets.HeroSliderImg3,
+    assets.HeroSliderImg4,
+    assets.HeroSliderImg5,
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Auto-slide effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
@@ -87,7 +79,7 @@ const HeroShakes = () => {
         {/* First panel */}
         <div className="relative w-full sm:w-1/3 h-48 sm:h-56 md:h-64">
           <img
-            src={HeroImg2}
+            src={assets.HeroImg2}
             alt="Coffee being poured"
             className="w-full h-full object-cover"
           />
@@ -105,7 +97,7 @@ const HeroShakes = () => {
         {/* Second panel */}
         <div className="relative w-full sm:w-1/3 h-48 sm:h-56 md:h-64">
           <img
-            src={HeroImg3}
+            src={assets.HeroImg3}
             alt="Dessert with berries"
             className="w-full h-full object-cover"
           />
@@ -125,7 +117,7 @@ const HeroShakes = () => {
         {/* Third panel */}
         <div className="relative w-full sm:w-1/3 h-48 sm:h-56 md:h-64">
           <img
-            src={HeroImg4}
+            src={assets.HeroImg4}
             alt="Cafe interior"
             className="w-full h-full object-cover"
           />

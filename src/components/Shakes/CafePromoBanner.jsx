@@ -1,5 +1,5 @@
 import React from "react";
-import PromoBanner from "../../assets/PromoBanner.png";
+import { assets } from "../../assets/assets";
 
 export default function CafePromoBanner() {
   return (
@@ -9,7 +9,7 @@ export default function CafePromoBanner() {
     >
       <div className="relative w-full h-[30vh] sm:h-[35vh] md:h-[40vh] overflow-hidden">
         <img
-          src={PromoBanner}
+          src={assets.PromoBanner}
           alt="Cafe interior with wooden tables and chairs"
           className="w-full h-full object-cover"
         />

@@ -1,6 +1,5 @@
 import React from "react";
-import AboutImg from "../../assets/aboutImg.png";
-import AboutImg2 from "../../assets/about2Img.png";
+import { assets } from "../../assets/assets";
 import { motion } from "framer-motion";
 
 export default function Aboutus() {
@@ -60,7 +59,7 @@ export default function Aboutus() {
         </motion.div>
 
         <motion.img
-          src={AboutImg}
+          src={assets.AboutImg}
           alt="Lounge interior with stylish lighting"
           className="w-full h-full object-cover"
           initial={{ scale: 1.1, opacity: 0.8 }}
@@ -115,7 +114,7 @@ export default function Aboutus() {
           viewport={{ once: true }}
         >
           <motion.img
-            src={AboutImg2}
+            src={assets.AboutImg2}
             alt="Bar interior with bottles display"
             className="w-full h-64 object-cover mb-8"
             initial={{ scale: 1.05, opacity: 0.8 }}

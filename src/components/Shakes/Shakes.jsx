@@ -1,8 +1,5 @@
 import React from "react";
-import shakesImg1 from "../../assets/shakesImg1.png";
-import shakesImg2 from "../../assets/shakesImg2.png";
-import shakesImg3 from "../../assets/shakesImg3.png";
-import shakesImg4 from "../../assets/shakesImg4.png";
+import { assets } from "../../assets/assets";
 
 export default function ShakesPanel() {
   const shakes = [
@@ -12,7 +9,7 @@ export default function ShakesPanel() {
       description:
         "OUR HOMEMADE BREAD, WHICH HAS BEEN PRAISED BY THE PRESIDENT",
       price: "₹199",
-      image: shakesImg1,
+      image: assets.shakesImg1,
     },
     {
       id: 2,
@@ -20,7 +17,7 @@ export default function ShakesPanel() {
       description:
         "OUR HOMEMADE BREAD, WHICH HAS BEEN PRAISED BY THE PRESIDENT",
       price: "₹299",
-      image: shakesImg2,
+      image: assets.shakesImg2,
     },
     {
       id: 3,
@@ -28,7 +25,7 @@ export default function ShakesPanel() {
       description:
         "OUR HOMEMADE BREAD, WHICH HAS BEEN PRAISED BY THE PRESIDENT",
       price: "₹399",
-      image: shakesImg3,
+      image: assets.shakesImg3,
     },
     {
       id: 4,
@@ -36,7 +33,7 @@ export default function ShakesPanel() {
       description:
         "OUR HOMEMADE BREAD, WHICH HAS BEEN PRAISED BY THE PRESIDENT",
       price: "₹499",
-      image: shakesImg4,
+      image: assets.shakesImg4,
     },
   ];
 

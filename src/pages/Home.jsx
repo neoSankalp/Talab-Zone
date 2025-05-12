@@ -4,6 +4,7 @@ import FlavorSlider from "../components/Hookah/flavorSlider";
 import WeddingHookahBanner from "../components/Hookah/WeddingHookahPlanner";
 import VIPCards from "../components/Hookah/VIPCards";
 import Aboutus from "../components/Hookah/Aboutus";
+import { assets } from "../assets/assets.js";
 
 const Home = () => {
   const controls = useAnimation();
@@ -17,7 +18,8 @@ const Home = () => {
       {/* ================== HERO SECTION ================ */}
       <div
         id="hero"
-        className="w-full py-5 h-auto min-h-screen bg-[url('./assets/bg.png')] bg-cover bg-no-repeat bg-center"
+        className={`w-full py-5 h-auto min-h-screen bg-cover bg-no-repeat bg-center`}
+        style={{ backgroundImage: `url(${assets.bg})` }}
       >
         <div className="text-center mt-48">
           <h2 className="text-color1 text-5xl font-bitterRose">

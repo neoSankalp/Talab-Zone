@@ -1,41 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
-import hookahFlavor2Img from "../../assets/hookahFlavor2.jpg";
-import hookahFlavor5Img from "../../assets/hookahFlavor5.png";
-import hookahFlavor4Img from "../../assets/hookahFlavor4.jpg";
-import hookahFlavor3Img from "../../assets/hookahFlavor3.jpg";
-import hookahFlavor1Img from "../../assets/hookahFlavor1.jpeg";
+import { assets } from "../../assets/assets.js";
 
 export default function FlavorSlider() {
   const carouselItemsData = [
     {
       title: "Blue Mist",
       num: "01",
-      image: hookahFlavor3Img,
+      image: assets.hookahFlavor3Img,
       class: "cardTitle1",
     },
     {
       title: "Kiwi Fusion",
       num: "02",
-      image: hookahFlavor4Img,
+      image: assets.hookahFlavor4Img,
       class: "cardTitle2",
     },
     {
       title: "Minty Grape Crush",
       num: "03",
-      image: hookahFlavor2Img,
+      image: assets.hookahFlavor2Img,
       class: "cardTitle3",
     },
     {
       title: "Tropical Thunder",
       num: "04",
-      image: hookahFlavor5Img,
+      image: assets.hookahFlavor5Img,
       class: "cardTitle4",
     },
     {
       title: "Lemon Chill",
       num: "05",
-      image: hookahFlavor1Img,
+      image: assets.hookahFlavor1Img,
       class: "cardTitle5",
     },
   ];

@@ -1,8 +1,5 @@
 import React from "react";
-import VIPImg from "../../assets/vipImg.png";
-import VIPImg1 from "../../assets/vipImg1.jpg";
-import VIPImg2 from "../../assets/vipImg2.jpg";
-import VIPImg3 from "../../assets/vipImg3.jpg";
+import { assets } from "../../assets/assets";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -12,7 +9,7 @@ const VIPCards = () => {
       <motion.div
         className="relative h-[40vh] flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: `url('${VIPImg}')`,
+          backgroundImage: `url('${assets.VIPImg}')`,
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -49,17 +46,17 @@ const VIPCards = () => {
         {[
           {
             title: "SIGNATURE AMBIENCE",
-            img: VIPImg1,
+            img: assets.VIPImg1,
             glow: "shadow-[0_0_40px_#ff9100]",
           },
           {
             title: "PRIVATE LOUNGE ZONES",
-            img: VIPImg2,
+            img: assets.VIPImg2,
             glow: "shadow-[0_0_40px_#c000ff]",
           },
           {
             title: "CURATED HOOKAH FLAVORS",
-            img: VIPImg3,
+            img: assets.VIPImg3,
             glow: "shadow-[0_0_40px_#ffbf00]",
           },
         ].map((card, index) => (

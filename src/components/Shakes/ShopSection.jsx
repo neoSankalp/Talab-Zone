@@ -1,10 +1,5 @@
 import React from "react";
-import chefImg1 from "../../assets/chefImg1.png";
-import chefImg2 from "../../assets/chefImg2.png";
-import chefImg3 from "../../assets/chefImg3.png";
-import chefImg4 from "../../assets/chefImg4.png";
-import shopImg1 from "../../assets/shopImg1.png";
-import shopImg2 from "../../assets/shopImg2.png";
+import { assets } from "../../assets/assets";
 
 export default function ShopSection() {
   return (
@@ -34,7 +29,7 @@ export default function ShopSection() {
         <div className="space-y-3 sm:space-y-4">
           <div className="overflow-hidden rounded">
             <img
-              src={shopImg1}
+              src={assets.shopImg1}
               alt="Hotel and Restaurant"
               className="w-full h-auto"
             />
@@ -44,14 +39,14 @@ export default function ShopSection() {
           <div className="grid grid-cols-2 gap-2 sm:gap-3">
             <div className="aspect-square overflow-hidden rounded">
               <img
-                src={chefImg1}
+                src={assets.chefImg1}
                 alt="Chef 1"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded">
               <img
-                src={chefImg2}
+                src={assets.chefImg2}
                 alt="Chef 2"
                 className="w-full h-full object-cover"
               />
@@ -106,21 +101,25 @@ export default function ShopSection() {
         {/* Location 2 */}
         <div className="space-y-3 sm:space-y-4 mt-6 md:mt-0">
           <div className="overflow-hidden rounded">
-            <img src={shopImg2} alt="Rivarno Cafe" className="w-full h-auto" />
+            <img
+              src={assets.shopImg2}
+              alt="Rivarno Cafe"
+              className="w-full h-auto"
+            />
           </div>
 
           {/* Chef images section with equal sizing */}
           <div className="grid grid-cols-2 gap-2 sm:gap-3">
             <div className="aspect-square overflow-hidden rounded">
               <img
-                src={chefImg3}
+                src={assets.chefImg3}
                 alt="Chef 3"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded">
               <img
-                src={chefImg4}
+                src={assets.chefImg4}
                 alt="Chef 4"
                 className="w-full h-full object-cover"
               />

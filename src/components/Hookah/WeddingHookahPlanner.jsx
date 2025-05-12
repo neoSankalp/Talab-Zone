@@ -1,20 +1,19 @@
 import React from "react";
-import weddingHookah from "../../assets/weddingHookah.png";
-import weddingHookahMobile from "../../assets/weddingHookahMobile.png";
+import { assets } from "../../assets/assets";
 
 const WeddingHookahBanner = () => {
   return (
     <div className="relative max-sm:h-[65vh] rounded-3xl w-full h-screen overflow-hidden">
       {/* Desktop Image */}
       <img
-        src={weddingHookah}
+        src={assets.weddingHookah}
         alt="Wedding Background"
         className="hidden md:block absolute inset-0 w-full h-full object-cover"
       />
 
       {/* Mobile Image */}
       <img
-        src={weddingHookahMobile}
+        src={assets.weddingHookahMobile}
         alt="Wedding Background Mobile"
         className="block md:hidden absolute inset-0 w-full h-full object-cover"
       />

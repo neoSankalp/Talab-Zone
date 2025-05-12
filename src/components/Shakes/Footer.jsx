@@ -1,5 +1,5 @@
 import React from "react";
-import shakeFooterImg from "../../assets/shakeFooterImg.png";
+import { assets } from "../../assets/assets";
 
 export default function ShakesFooter() {
   return (
@@ -46,7 +46,7 @@ export default function ShakesFooter() {
           <div className="relative">
             <div className="">
               <img
-                src={shakeFooterImg}
+                src={assets.shakeFooterImg}
                 alt="Milkshake"
                 className="w-24 h-40 sm:w-28 sm:h-48 md:w-32 md:h-56 object-contain -rotate-[20deg]"
               />
